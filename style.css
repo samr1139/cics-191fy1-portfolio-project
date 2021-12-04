@@ -1,0 +1,114 @@
+/*
+Copyright 2021 Simon Andrews
+
+This work is subject to the terms of the Creative Commons Attribution-ShareAlike
+4.0 International License. If a copy of the license was not distributed with
+this file, You can obtain one at http://creativecommons.org/licenses/by-sa/4.0/.
+*/
+
+/*
+Load the font "Poppins" from Google Fonts. When you pick a font, make sure to
+select all the variants you will need (probably at least regular, regular
+italic, and bold).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    /* Some colors can be refered to by names. "snow" is a nice off-white. */
+    background-color: snow;
+
+    /* Others can be specified by their RGB values. */
+    color: rgb(117, 117, 117);
+
+    /*
+    Use fonts from the Poppins family if loading succeeds, or fall back to any
+    sans serif font if it doesn't.
+    */
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+In the navbar and in any paragraph, we want links to be black (instead of gray
+like the rest of the text) and be underlined).
+*/
+#navbar a, p a {
+    color: black;
+    text-decoration: underline;
+}
+
+/*
+When the mouse cursor hovers over any link in the navbar or a paragraph, it will
+ - turn white,
+ - get a black highlight, and
+ - become italic.
+*/
+#navbar a:hover, p a:hover {
+    background-color: black;
+    color: white;
+    font-style: italic;
+}
+
+/*
+The underline looks kind of ugly under the section symbol § in section headers,
+so turn it off there only.
+*/
+#content h1 a {
+    color: black;
+    text-decoration: none;
+}
+
+/*
+We won't italicize the symbol either, but we'll keep everything else the same as
+with the rest of the links.
+*/
+#content h1 a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Make all horizontal lines dashed, thin, and black. */
+hr {
+    border-top: 1px dashed black;
+}
+
+#container {
+    /*
+    Makes the entire div only 960px wide. This number is favored by web
+    developers for many reasons. See https://stackoverflow.com/q/7415758.
+    */
+    width: 960px;
+
+    /*
+    Makes it so that there is an equal amount of space on either side of the div
+    to the edges of its outer container (in this case, body), centering it.
+    */
+    margin: auto;
+}
+
+#name {
+    /* Everything here should be straightforward. */
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#navbar {
+    /* Instead of using bullet points, have no decorations at all. */
+    list-style-type: none;
+
+    /* Remove the extra space that's added in. */
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    /* Remove breaks after every element in a list */
+    display: inline;
+}
+
+/*
+Make the images fit so that we don't spill out of the container. 480 is 960
+divided by 2.
+*/
+.gallery img {
+    width: 480px;
+}
