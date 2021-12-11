@@ -76,12 +76,12 @@ Werkzeug 2.0.2
 worry about what exactly. It's not important for this project.)
 
 ### Make your website!
- 1. In the folder called "templates" and put index.html in it. This folder will
-    hold all of the code for your website's frontend.
- 2. In the folder called "static" and put style.css in it. This folder will hold
-    any files you want your website to include that aren't interactive or
-    dynamic. You could also put images, music, JavaScript scripts, and anything
-    else like that here.
+ 1. Put index.html in the folder called "templates". This folder will hold all
+    of the code for your website's frontend.
+ 3. Put style.css the folder called "static". This folder will hold any files 
+    you want your website to include that aren't interactive or dynamic. You
+    could also put images, music, JavaScript scripts, and anything else like
+    that here.
  3. Update the line in index.html where the stylesheet is loaded (the <link>) so
     that it loads "/static/style.css" instead of just "style.css"
  4. Create a file called application.py and put the following code in:
