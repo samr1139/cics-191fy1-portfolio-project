@@ -1,7 +1,6 @@
 # FYS website project
 This repository will contain everything you need to do the final project for
-CICS 191FY1: History of Computing. Right now, only part 1 is up. Some ideas for
-part 2 will be up shortly so keep checking back!
+CICS 191FY1: History of Computing. Right now, only part 1 is up.
 
 ## Getting started
 Click the green "Code" button in the top left of this page, then click
@@ -41,4 +40,10 @@ need to adapt it so that it follows the guidelines above. So:
  - It should have a non-default color scheme.
 
 ## Part 2
-Coming soon...
+Pick any folder from `part2`. In it, you will find a tutorial for using some
+technology to make your website more exciting somehow. Pick one tutorial to
+follow, and submit the result.
+
+Alternatively, you can pick any other technology that you are interested in. If
+you choose to do this, you should skim the tutorials that have already been made
+to make sure that your idea is of roughly similar complexity.
