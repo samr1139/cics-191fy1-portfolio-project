@@ -1,0 +1,270 @@
+
+<!--
+Copyright 2021 Simon Andrews
+
+This work is subject to the terms of the Creative Commons Attribution-ShareAlike
+4.0 International License. If a copy of the license was not distributed with
+this file, You can obtain one at http://creativecommons.org/licenses/by-sa/4.0/.
+-->
+
+<!--
+This is an HTML file. HTML stands for "HyperText Markup Language." It is the
+format that all the websites you visit are written in.
+
+Any modern browser will allow you to view the HTML source code of any website.
+In Google Chrome, you can do this by right-clicking on a page and clicking the
+"View page source" button in the menu that appears. You can also click the
+"Inspect" button to open the Developer Console, then click the "Elements" tab
+to get a nicer, more interactive view of the page's code. (And many other
+things! Try poking around.)
+
+Everything between the two arrow-like symbols surrounding this text is a
+comment. Go through this file and follow the instructions in the comments to
+make your own portfolio page!
+-->
+
+<!--
+Technically, all HTML documents must start with a doctype declaration, as
+written below. If you forget to include this, your browser probably won't mind
+though.
+-->
+<!DOCTYPE html>
+
+<!--
+Now, we will begin our HTML document using the <html> tag.
+-->
+<html>
+    <!--
+    Now we will create the "head" of our document. All HTML documents have a
+    "head," where we set up the page by setting metadata, loading scripts and
+    stylesheets, and anything else we might need to do. The "body" has the
+    action content.
+
+    In LaTeX terms, an HTML document's head is like a LaTeX document's preamble
+    and an HTML document's body is like a LaTeX document's "document"
+    environment.
+    -->
+    <head>
+        <!--
+        First, we will set the title of your page. This is the text that appears
+        in your browser as the label for a tab.
+        -->
+        <title>Sam's Website</title>
+
+        <!--
+        Next, we will load in a stylesheet. Stylesheets are written in a
+        language called CSS (Cascading StyleSheets). You will look at the
+        stylesheet once you are done with this file.
+
+        You _could_ do your styling right here in this HTML document, by using
+        the <style> tag or by setting style attributes for individual elements.
+        However this is generally considered to be bad practice.
+        --><link rel="stylesheet" href= "project2.css"/>
+		</head>
+
+
+
+    <!--
+    Now we will move on to the body of the document. As a reminder, this will
+    contain all of the actual content of your page.
+    -->
+    <body>
+        <!--
+        A "div" element specifies a division of your HTML document. It can be
+        used for grouping together things that should belong with one another.
+        This is useful for applying some style change to only _part_ of your
+        document. For example, if you want to have blog posts in black text and
+        alerts in red text, you could wrap up both in divs and apply those
+        styles to each seperately.
+
+        A div can have an "id" or a "class", which is a name associated with a
+        div that allows stylesheets and scripts to find it. There can only be
+        one div with a certain id, but there is no limit on the number of divs
+        that can have some class. You might use an id for a navigation bar (of
+        which there should only be one) and a class for an element on the
+        navigation bar (of which there will be many).
+
+        We will now create a div with id "container." The container will contain
+        all of our content while keeping it seperate from the body overall.
+        -->
+        <div id="container">
+            <!--
+            Let's make another div, for the header. This section will feature
+            your name, and some handy links.
+            
+            Later, we will make other divs for the content and the footer.
+            -->
+            <div id="header">
+                <!--
+                First, since you are making a portfolio website you will want to
+                feature your own name prominently. We will use a <span>, which
+                is similar to a <div> but is typically used for smaller amounts
+                of the document.
+                -->
+                <span id="name">Sam Rogers</span>
+
+                <!--
+                To divide this content from the rest of the page, we will use a
+                horizontal line, which can be drawn using the hr tag.
+                -->
+                <hr />
+
+                <!--
+                Now let's put some links in! These will be "anchor" links that
+                make your browser scroll to a different section of the page,
+                instead of taking you to a whole new page. A link uses the tag
+                <a> and has an attribute called "href" that specifies where the
+                link takes you. You can tell an anchor link from a regular link
+                because it starts with a # character.
+
+                We will use the <ul> (unordered list) environment and fill it
+                with <li>s (list items). By default this produces a bullet list,
+                but with some CSS styling we can convert it into something that
+                looks a bit more like a navigation bar. Crucially since we apply
+                those styles selectively we can still use the regular old bullet
+                style <ul> anywhere else in the document!
+                -->
+                <ul id="navbar">
+                    <li><a href="#about-me-section">About me</a></li>
+                    <li><a href="#projects-section">Projects</a></li>
+                    <li><a href="#favorite-movies-section">Favorite Movies</a></li>
+                </ul>
+
+                <!--
+                One more horizontal line...
+                -->
+                <hr />
+
+                <!--
+                And that's the end of our header!
+                -->
+            </div>
+
+            <!--
+            Now we need to add the content of our page. We will need another div
+            for this.
+            -->
+            <div id="content">
+                <!--
+                The content area will have sections corresponding to the links
+                we added to the navbar. Clicking on one of the links will take
+                you to that section on the page.
+
+                Since we're now going to have more than one of the same kind of
+                thing (sections), it's appropriate to start using classes.
+
+                HTML has a "section" tag, but it doesn't actually do anything so
+                we will still need to style it using CSS. Each section will have
+                both a class "content-section" so we can apply rules to _all_
+                sections, as well as a unique ID so that our anchor links work.
+                -->
+                <section class="content-section" id="about-me-section">
+                    <h1><a href="#about-me-section">§</a> About me</h1>
+                    <p>
+                       Hey. My name is Sam Rogers. I am studying computer science at Umass Amherst, and I am a freshman. I love to play basketball, listen to music, and watch movies in my freetime.
+                    </p>
+                    <p>
+                        <!--
+                        You can use "mailto:" followed by an email address to
+                        create a link that opens up the user's email client.
+                        -->
+                        This is my website. Here, I put some of my best projects, and a part about my favorite movies. You can email me at,
+                        <a href="mailto:smrogers@umass.edu">smrogers@umass.edu</a> so we
+                        can discuss anything pertaining to what you see here. 
+                    </p>
+                    <p>
+                        As I said, I enjoy watching movies as a hobby. I included a section which contains my favorite movies. 
+                    </p>
+                </section>
+                <section class="content-section" id="projects-section">
+                    <h1><a href="#project-section">§</a> Projects</h1>
+                    <p>
+                        Here is a selection of some of the projects I am most
+                        proud of:
+                        <ul>
+                            <!--
+                            You can do some text styling in HTML. <strong> by
+                            default makes your text bold and <em> emphasizes
+                            your text by making it italic. These are preferred
+                            today over <b> and <i> because they don't have a
+                            specific style associated with them and stylesheet
+                            developers can override the defaults without it
+                            being weird. (For example, by changing strong to
+                            underline text instead of make it bold.)
+                            -->
+                            <li>
+                                <strong>Fish-flush-fuss</strong> An
+                                implementation of the game fish, flush, fuss. This is a numbers based game, and my program allows people to see results based on which numbers they choose, and the amount of rounds that will take place.
+                                Created for my class COMPSCI 121. <em>Written
+                                in Java.</em>
+                            </li>
+                            <li>
+                                <strong>Gradebook:</strong> A program that allows users to input their grades in a variety of categories for the class CompSci 121. I made this program in CompSci 121 back in October. <em>Written in C.</em>
+                            </li>
+                            <li>
+                                <strong>This website:</strong> A personal
+                                portfolio website that showcases some stuff I've
+                                made. Created for my freshman year seminar, CICS
+                                191FY1. <em>Written in HTML, CSS, and
+                                JavaScript.</em>
+                            </li>
+                        </ul>
+                    </p>
+                </section>
+                <section class="content-section" id="favorite-movies-section">
+                    <h1><a href="#favorite-movies-section">§</a> Movies</h1>
+                    <p>
+                        I like to watch movies! These are some of my favorites.
+                    </p>
+                    <!--
+                    This section shows how to create tables. This is an _okay_
+                    way of doing complicated formatting. Ideally you would use
+                    CSS grids or flexboxes or use a library like Bootstrap that
+                    does it for you, but this is fine for now as a beginner
+                    project.
+
+                    <tr> means "table row" and <td> means "table data cell
+                    element" (basically, one entry in the table).
+
+                    An <img> tag loads an image. If you have images you'd like
+                    to include without posting them on the web, you can just
+                    put them in the same folder as this file then put their name
+                    directly as the value for the src attribute.
+
+                    It is generally considered rude to embed images from other
+                    sites since it can eat up a lot of their bandwidth, but
+                    since this is such a small class I don't think Wikimedia
+                    will mind.
+                    -->
+                  <p>
+					  <ul>
+					  <li>
+						  <strong>The Dark Knight
+						  <li>
+						  <strong>The Empire Strikes back
+						  <li>
+						  <strong>Django Unchained
+					    <ul>
+					<p>
+				<section>
+            
+            <!--
+            And that's the end of our content. Now let's just include a footer
+            and we'll be done.
+            -->
+            <div id="footer">
+                <!-- Horizontal line. -->
+                <hr />
+
+                <!-- And a small copyright notice at the bottom. -->
+                <p>
+                    Unless otherwise specified, the content on this website is
+                    licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">
+                    Creative Commons Attribution-ShareAlike 4.0 International
+                    License</a>.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
